@@ -243,10 +243,10 @@ function App() {
                 <article className={"p-card p-" + p.id} key={p.id}>
                   <div className="p-visual">
                     <em>{i < 3 ? "NFC + QR" : "SOCIAL NFC"}</em>
-                    <div className="catalog-mockups">
+                    {p.image ? <img className="product-image" src={p.image} alt={p.name} /> : <div className="catalog-mockups">
                       <span className="mock mock-back"><b>{i < 3 ? "G" : i === 3 ? "◎" : "f"}</b><small>QR</small></span>
                       <span className="mock mock-front"><small>tap to connect</small><b>{i < 3 ? "G" : i === 3 ? "◎" : "f"}</b><i>{i < 3 ? "★★★★★" : "Follow us"}</i></span>
-                    </div>
+                    </div>}
                   </div>
                   <div className="p-body">
                     <h3>{p.name}</h3>
