@@ -20,7 +20,7 @@ export const copy = {
 
     nav: {
       home: "მთავარი",
-      products: "პროდუქტები",
+      products: "ბარათები",
       prices: "ფასები",
       how: "როგორ მუშაობს",
       delivery: "მიწოდება",
