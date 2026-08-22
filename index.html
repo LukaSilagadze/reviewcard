@@ -4,12 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#0b5cff" />
+
     <title>ReviewCard | მიიღე მეტი Google შეფასება</title>
     <meta name="description" content="ReviewCard — Google Review ბარათები, სტენდები და სტიკერები ბიზნესებისთვის. NFC და QR ტექნოლოგია, მიწოდება მთელ საქართველოში." />
     <meta property="og:title" content="ReviewCard | მიიღე მეტი Google შეფასება" />
     <meta property="og:description" content="NFC და QR პროდუქტები მეტი შეფასებისა და გამომწერისთვის." />
     <meta property="og:type" content="website" />
+
     <link rel="icon" href="/assets/icon.png" />
+
+    <!-- Loaded here rather than via @import in the stylesheet, so the fonts
+         download in parallel with the CSS instead of after it. Only the three
+         weights the stylesheet actually uses are requested. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&family=Noto+Sans+Georgian:wght@400;700;800&display=swap"
+    />
+    <!-- The hero background is the largest paint on the page. Preload it, but
+         match the media queries in global.css so only one rendition is fetched. -->
+    <link rel="preload" as="image" href="/assets/hero-product-v2.webp" media="(min-width: 601px)" fetchpriority="high" />
+    <link rel="preload" as="image" href="/assets/hero-product-v2-800.webp" media="(max-width: 600px)" fetchpriority="high" />
   </head>
-  <body><div id="root"></div><script type="module" src="/src/main.jsx"></script></body>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>

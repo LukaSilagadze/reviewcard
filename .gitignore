@@ -2,3 +2,7 @@ node_modules/
 dist/
 .vite/
 *.local
+
+# Full-resolution camera masters. Kept locally; public/assets holds the
+# web-ready renditions produced by `npm run optimize:images`.
+assets-src/
