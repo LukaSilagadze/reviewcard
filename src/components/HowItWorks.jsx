@@ -1,9 +1,4 @@
-/** The illustration on each step card: what the phone in the scene shows. */
-const SCENES = [
-  { glyph: "◉", label: "NFC" },
-  { glyph: "↗", label: "Open" },
-  { glyph: "★★★★★", label: "Review" },
-];
+const STEP_PHOTOS = ["/assets/step1.webp", "/assets/step2.webp", "/assets/step3.webp"];
 
 export function HowItWorks({ t }) {
   return (
@@ -16,21 +11,14 @@ export function HowItWorks({ t }) {
         <div className="steps">
           {t.steps.map(([title, detail], i) => (
             <article className={`step-card step-card-${i + 1}`} key={title}>
-              <div className="step-scene" aria-hidden="true">
-                <div className="scene-card">
-                  <img src="/assets/icon.webp" alt="" width="43" height="43" loading="lazy" />
-                  <span>Review us on</span>
-                  <b>Google</b>
-                  <small>★★★★★</small>
-                </div>
-                <div className="scene-phone">
-                  <div className="phone-top" />
-                  <span>{SCENES[i].glyph}</span>
-                  <b>{SCENES[i].label}</b>
-                  <i />
-                </div>
-                <div className="signal">)))</div>
-              </div>
+              <img
+                className="step-photo"
+                src={STEP_PHOTOS[i]}
+                alt=""
+                aria-hidden="true"
+                loading="lazy"
+                decoding="async"
+              />
 
               <div className="step-shade" />
 

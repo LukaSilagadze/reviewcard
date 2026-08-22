@@ -4,7 +4,6 @@ export function Delivery({ t }) {
       <div className="container delivery-grid">
         <div>
           <h2>{t.delivery}</h2>
-          <p>{t.deliveryText}</p>
 
           <div className="delivery-times">
             <div>
@@ -24,13 +23,20 @@ export function Delivery({ t }) {
           </div>
         </div>
 
-        <div className="route-art" aria-hidden="true">
-          <div className="route">
-            • · · · · · · · · · · · · · · · · · · · · · · · · · ●
-          </div>
-          <span className="pin">⌖</span>
-          <span className="box">▣</span>
-          <b>ReviewCard</b>
+        {/* Google My Maps — every business currently using ReviewCard. The
+            iframe is oversized and shifted up to crop Google's own header
+            bar off the top (it's a fixed-height toolbar, not proportional
+            to the iframe's size, so this is a fixed px crop — see the CSS).
+            Our own title sits on top of the frame in its place. */}
+        <div className="delivery-map-frame">
+          <span className="delivery-map-title">{t.deliveryMapLabel}</span>
+          <iframe
+            className="delivery-map"
+            src="https://www.google.com/maps/d/u/0/embed?mid=1gAmxAcQ2qAJ1RrwQ7qCgEy7TbNlmme8&ehbc=2E312F&noprof=1"
+            title={t.deliveryMapTitle}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
         </div>
       </div>
     </section>

@@ -9,7 +9,6 @@ import { Products } from "./components/Products";
 import { Prices } from "./components/Prices";
 import { Benefits } from "./components/Benefits";
 import { Delivery } from "./components/Delivery";
-import { CoverageMap } from "./components/CoverageMap";
 import { Partners } from "./components/Partners";
 import { Testimonials } from "./components/Testimonials";
 import { Faq } from "./components/Faq";
@@ -42,9 +41,7 @@ export default function App() {
         <Products t={t} />
         <Prices t={t} />
         <Delivery t={t} />
-        <CoverageMap lang={lang} t={t} />
         <Partners t={t} />
-        <Testimonials t={t} />
         <Faq t={t} onOrder={openOrder} />
         <OrderCta t={t} onOrder={openOrder} />
       </main>

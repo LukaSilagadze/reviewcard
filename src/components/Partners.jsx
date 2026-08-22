@@ -1,6 +1,10 @@
 import { partners } from "../config/siteConfig";
 
-/** Placeholder tiles until real partner logos land — see siteConfig. */
+/**
+ * Round tiles sized for a social profile picture — drop a `logo` path onto a
+ * partner in siteConfig.js (`{ id, logo: "/assets/partners/name.webp" }`)
+ * and it replaces the placeholder automatically, no changes needed here.
+ */
 export function Partners({ t }) {
   return (
     <section id="partners" className="section partners">
@@ -12,8 +16,14 @@ export function Partners({ t }) {
       <div className="logo-track">
         {[...partners, ...partners].map((partner, i) => (
           <div className="partner-logo" key={`${partner.id}-${i}`}>
-            <span aria-hidden="true">◇</span>
-            <i>{t.partnerLogoPlaceholder}</i>
+            {partner.logo ? (
+              <img src={partner.logo} alt={partner.name ?? ""} loading="lazy" decoding="async" />
+            ) : (
+              <>
+                <span aria-hidden="true">◇</span>
+                <i>{t.partnerLogoPlaceholder}</i>
+              </>
+            )}
           </div>
         ))}
       </div>

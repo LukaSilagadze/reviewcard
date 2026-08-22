@@ -27,27 +27,44 @@ export const contact = {
 };
 
 /**
- * Partner logos and testimonial screenshots are still placeholders — the
- * sections render generic tiles until real assets land. Replace each entry
- * with `{ name, logo }` / `{ name, screenshot }` and update the components.
+ * Testimonial screenshots are still placeholders — that section renders
+ * generic tiles until real ones land. Replace each entry with
+ * `{ name, screenshot }` and update Testimonials.jsx.
  */
-export const partners = Array.from({ length: 7 }, (_, i) => ({ id: i + 1 }));
 export const testimonials = Array.from({ length: 5 }, (_, i) => ({ id: i + 1 }));
 
+export const partners = [
+  ["carpology-logo", "Carpology Shop"],
+  ["f1shopgeorgia", "F1 Shop Georgia"],
+  ["pizzamedici", "Pizza Medici"],
+  ["logo-png", "Needshop"],
+  ["luxink", "Lux Ink Tattoo Lounge"],
+  ["astralfitness", "Astral Fitness"],
+  ["burgerking", "Burger King"],
+  ["meamacollect", "Meama Collect"],
+  ["grossmann", "Grossmann"],
+  ["gtline", "GT Line"],
+  ["kartinglilo", "Karting Lilo"],
+  ["pkdental", "Pavle Khujadze Dental"],
+  ["techauto", "TechAuto"],
+  ["zooarea", "Zoo Area"],
+].map(([id, name]) => ({ id, name, logo: `/assets/partner_logos/${id}.webp` }));
+
 export const customerGallery = [
-  "dekaroom",
-  "dekaroomdesk",
-  "fishingshop",
-  "grossmann",
-  "grossmannbg",
-  "gtline",
-  "macncheese",
-  "meama",
-  "pizzamedici",
-  "tamashobanadesk",
-  "tamshobana",
-  "undergroundarena",
-].map((name) => `/assets/customer-gallery/${name}.webp`);
+  "dekaroom.webp",
+  "dekaroomdesk.webp",
+  "burgerking.jpg",
+  "grossmann.webp",
+  "grossmannbg.webp",
+  "gtline.webp",
+  "macncheese.webp",
+  "meama.webp",
+  "pizzamedici.webp",
+  "tamashobanadesk.webp",
+  "tamshobana.webp",
+  "undergroundarena.webp",
+  "fishingshop.webp"
+].map((name) => `/assets/customer-gallery/${name}`);
 
 /**
  * Hero background carousel. `desktop`/`mobile` are two crops of the same

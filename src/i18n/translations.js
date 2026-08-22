@@ -36,7 +36,7 @@ export const copy = {
 
     trust: [
       "მიწოდება მთელ საქართველოში",
-      "NFC + QR",
+      "NFC",
       "აპლიკაცია არ არის საჭირო",
     ],
 
@@ -44,7 +44,7 @@ export const copy = {
     heroBenefits: [
       ["მარტივი მომხმარებლისთვის", "აპლიკაცია არ არის საჭირო"],
       ["სწრაფი", "დაახლოებით 2 სამუშაო დღე"],
-      ["NFC + QR", "ორივე ტექნოლოგია ერთ ბარათზე"],
+      ["NFC", "ორივე ტექნოლოგია ერთ ბარათზე"],
       ["აპის გარეშე", "მზადაა მიღებისთანავე"],
     ],
 
@@ -54,9 +54,9 @@ export const copy = {
     howTitle: "როგორ მუშაობს",
     stepLabel: "ნაბიჯი",
     steps: [
-      ["მიიტანე ტელეფონი ReviewCard-თან", "ან დაასკანერე QR კოდი."],
-      ["იხსნება შესაბამისი გვერდი", "პირდაპირ ბრაუზერში, აპის გარეშე."],
-      ["კლიენტი ტოვებს შეფასებას", "სულ რამდენიმე წამში."],
+      ["მიიტანე ტელეფონი ReviewCard-თან"],
+      ["იხსნება შესაბამისი გვერდი"],
+      ["კლიენტი ტოვებს შეფასებას"],
     ],
 
     products: "შეარჩიე შენი ReviewCard",
@@ -64,9 +64,9 @@ export const copy = {
       "ყველა პროდუქტი ინდივიდუალურად პროგრამირდება შენი ბიზნესისთვის.",
     price: "ფასი მალე დაემატება",
     productDescriptions: {
-      card: "NFC + QR ბარათი, რომელიც ხსნის ბიზნესის Google შეფასების გვერდს.",
+      card: "NFC ბარათი, რომელიც ხსნის ბიზნესის Google შეფასების გვერდს.",
       stand: "სტენდი კაფეებისთვის, რესტორნებისთვის, სალონებისა და მაღაზიებისთვის.",
-      sticker: "კომპაქტური NFC + QR სტიკერი დახლზე, მაგიდაზე ან სხვა ზედაპირზე.",
+      sticker: "კომპაქტური NFC სტიკერი დახლზე, მაგიდაზე ან სხვა ზედაპირზე.",
       instagram: "ერთი შეხებით ხსნის ბიზნესის Instagram გვერდს.",
       facebook: "ერთი შეხებით ხსნის ბიზნესის Facebook გვერდს.",
     },
@@ -96,9 +96,8 @@ export const copy = {
     other: "სხვა ლოკაციებში",
     otherTime: "2–4 სამუშაო დღე",
 
-    map: "ReviewCard უკვე საქართველოს სხვადასხვა ქალაქშია",
-    mapLabel: "საქართველოს რუკა მომხმარებლების ლოკაციებით",
-    mapUnit: "ქალაქი და რეგიონი",
+    deliveryMapTitle: "რუკა - ბიზნესები, რომლებსაც აქვთ ReviewCard საქართველოში",
+    deliveryMapLabel: "ReviewCard-ები საქართველოს მასშტაბით",
 
     partners: "ბიზნესები, რომლებმაც ReviewCard აირჩიეს",
     partnerLogoPlaceholder: "ლოგო",
@@ -232,9 +231,8 @@ export const copy = {
     other: "Other locations",
     otherTime: "2–4 working days",
 
-    map: "ReviewCard is already used across Georgia",
-    mapLabel: "Map of Georgia with customer locations",
-    mapUnit: "cities & regions",
+    deliveryMapTitle: "Map — businesses using ReviewCard across Georgia",
+    deliveryMapLabel: "ReviewCard businesses",
 
     partners: "Businesses that chose ReviewCard",
     partnerLogoPlaceholder: "LOGO",

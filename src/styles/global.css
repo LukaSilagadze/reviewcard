@@ -100,7 +100,8 @@ h3,
 .accordion button,
 .footer-grid b,
 .header-bottom nav a,
-.mobile-order {
+.header-order,
+.mobile-order-bar button {
   font-family: var(--font-display);
   font-weight: 400;
 }
@@ -187,13 +188,15 @@ h3,
   align-items: center;
   justify-content: center;
   gap: 16px;
-  padding: 15px 21px;
+  /* Top/bottom uneven on purpose — see .header-order for why. */
+  padding: 17.75px 21px 12.25px;
   border: 0;
   border-radius: 13px;
   background: var(--blue);
   color: var(--white);
   font-size: 13px;
-  box-shadow: 0 9px 25px rgba(11, 92, 255, 0.2);
+  line-height: 1;
+  box-shadow: 0 9px 20px rgba(11, 31, 58, 0.18);
   transition: 0.25s;
 }
 
@@ -206,6 +209,33 @@ h3,
   background: var(--white);
   color: var(--blue);
   box-shadow: none;
+}
+
+/* Ghost variant for the hero's WhatsApp link — frosted-glass background
+   (not a colored glow: the shadow stays the same neutral dark tone as the
+   base .btn, only the border picks up WhatsApp's green). Sizing is
+   inherited entirely from .btn/.hero-center .btn, so it always matches
+   whatever button sits next to it. */
+.btn-whatsapp {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 2px solid #25d366;
+  color: var(--white);
+}
+
+.btn-whatsapp:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.btn-whatsapp svg {
+  width: 18px;
+  height: 18px;
+  color: #25d366;
+  /* .btn's padding is deliberately asymmetric (top > bottom) to fix Georgian
+     text-baseline centering, which also shifts this non-text flex sibling
+     down by the same amount — cancel it out here. */
+  transform: translateY(-2.75px);
 }
 
 .text-btn {
@@ -441,8 +471,42 @@ h3,
   color: var(--white);
 }
 
-/* Shown only inside the mobile drawer. */
-.mobile-order {
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+/* Persistent order button in the sticky lower bar — visible whenever that
+   bar is (i.e. always, since it's either in its natural spot at the top of
+   the page or stuck there on scroll). Hidden below 700px, where the header
+   collapses into a drawer and .mobile-order-bar takes over instead. */
+.header-order {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Uneven top/bottom on purpose: the Georgian fallback face reserves
+     descent space this label's glyphs don't use, so flex's line-box
+     centering leaves the visible text sitting noticeably high — this
+     shifts it back down without changing the button's overall height. */
+  padding: 11px 18px 7px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--blue);
+  color: var(--white);
+  font-size: 12px;
+  line-height: 1;
+  transition: 0.2s;
+}
+
+.header-order:hover {
+  background: var(--blue-dark);
+}
+
+/* Fixed bottom CTA bar for phones — shown only below 700px (see media query),
+   so it's on screen regardless of scroll position or whether the nav drawer
+   is open, unlike the old drawer-only order button this replaces. */
+.mobile-order-bar {
   display: none;
 }
 
@@ -506,6 +570,10 @@ h3,
     display: none;
   }
 
+  .header-order {
+    display: none;
+  }
+
   .header-bottom nav {
     display: none;
     position: absolute;
@@ -539,14 +607,43 @@ h3,
     width: 35px;
   }
 
-  .mobile-order {
+  .mobile-order-bar {
     display: block;
-    margin-top: 15px;
-    padding: 13px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: var(--z-header);
+    padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
+    /* Hidden until the hero scrolls past (see .is-visible below) — slides
+       out of the way rather than just popping in. */
+    transform: translateY(100%);
+    transition: transform 0.25s ease;
+    background: var(--header-navy-deep);
+    box-shadow: 0 -8px 24px rgba(4, 15, 34, 0.16);
+  }
+
+  .mobile-order-bar.is-visible {
+    transform: translateY(0);
+  }
+
+  .mobile-order-bar button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    /* See .header-order — same fix, scaled for this button's 14px text. */
+    padding: 16px 13px 10px;
     border: 0;
     border-radius: 10px;
     background: var(--blue);
     color: var(--white);
+    line-height: 1;
+  }
+
+  /* Room for the fixed bar so it doesn't sit over the footer's content. */
+  body {
+    padding-bottom: calc(78px + env(safe-area-inset-bottom));
   }
 }
 
@@ -651,7 +748,6 @@ h3,
   font-size: clamp(40px, 4.8vw, 59px);
   line-height: 1.04;
   letter-spacing: -0.055em;
-  text-shadow: 0 3px 24px rgba(0, 0, 0, 0.3);
 }
 
 .hero-center > p {
@@ -660,7 +756,6 @@ h3,
   color: var(--white);
   font-size: 14px;
   line-height: 1.6;
-  text-shadow: 0 2px 15px #000;
 }
 
 .hero-center .actions {
@@ -672,7 +767,7 @@ h3,
 
 .hero-center .btn {
   min-width: 170px;
-  padding: 13px 22px;
+  padding: 15.75px 22px 10.25px;
   border-radius: 999px;
 }
 
@@ -719,7 +814,7 @@ h3,
 
   .hero-center .btn {
     width: 100%;
-    padding: 12px 18px;
+    padding: 14.75px 18px 9.25px;
   }
 }
 
@@ -917,139 +1012,13 @@ h3,
   box-shadow: 0 24px 50px rgba(19, 53, 92, 0.18);
 }
 
-/* Illustration */
-.step-scene {
+/* Photo */
+.step-photo {
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(circle at 25% 22%, #fff 0, transparent 38%),
-    linear-gradient(135deg, #dbeaff, #77aafa);
-  overflow: hidden;
-}
-
-.step-card-2 .step-scene {
-  background:
-    radial-gradient(circle at 72% 18%, #fff 0, transparent 34%),
-    linear-gradient(145deg, #cce1ff, #5b98f8);
-}
-
-.step-card-3 .step-scene {
-  background:
-    radial-gradient(circle at 35% 12%, #fff 0, transparent 33%),
-    linear-gradient(145deg, #e5f0ff, #6da5fa);
-}
-
-.scene-card {
-  position: absolute;
-  left: 24px;
-  top: 42px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 135px;
-  height: 188px;
-  padding: 17px;
-  border-radius: 17px;
-  background: var(--white);
-  color: #172337;
-  box-shadow: 0 24px 45px #294d7d55;
-  transform: rotate(-9deg);
-}
-
-.step-card-3 .scene-card {
-  left: 18px;
-  top: 70px;
-  transform: rotate(8deg);
-}
-
-.scene-card img {
-  width: 34px;
-  height: auto;
-  margin-bottom: 30px;
-  border-radius: 10px;
-}
-
-.scene-card span {
-  font-size: 12px;
-}
-
-.scene-card b {
-  font-size: 21px;
-}
-
-.scene-card small {
-  margin-top: 12px;
-  color: #ffb000;
-  letter-spacing: 2px;
-}
-
-.scene-phone {
-  position: absolute;
-  right: 14px;
-  top: 36px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 117px;
-  height: 235px;
-  border: 6px solid #0d1725;
-  border-radius: 22px;
-  background: linear-gradient(180deg, #eef6ff, #fff);
-  color: var(--blue);
-  box-shadow: 0 28px 45px #254d8055;
-  transform: rotate(10deg);
-}
-
-.step-card-2 .scene-phone {
-  right: 20px;
-  top: 56px;
-  transform: rotate(-8deg);
-}
-
-.step-card-3 .scene-phone {
-  right: 27px;
-  top: 27px;
-  transform: rotate(12deg);
-}
-
-.phone-top {
-  position: absolute;
-  top: 0;
-  width: 70px;
-  height: 15px;
-  border-radius: 0 0 10px 10px;
-  background: #0d1725;
-}
-
-.scene-phone span {
-  font-size: 24px;
-}
-
-.scene-phone b {
-  margin-top: 8px;
-}
-
-/* Three stacked placeholder text lines, drawn with box-shadow. */
-.scene-phone i {
-  width: 70%;
-  height: 9px;
-  margin-top: 24px;
-  border-radius: 9px;
-  background: #d9e6f7;
-  box-shadow:
-    0 18px 0 #d9e6f7,
-    0 36px 0 #d9e6f7;
-}
-
-.signal {
-  position: absolute;
-  right: 105px;
-  top: 90px;
-  color: var(--blue);
-  font-size: 22px;
-  font-weight: 800;
-  transform: rotate(-12deg);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* Caption */
@@ -1120,16 +1089,6 @@ h3,
   .how-section .step-card:last-child {
     grid-column: auto;
     height: 390px;
-  }
-
-  .scene-card {
-    left: 14%;
-    top: 35px;
-  }
-
-  .scene-phone {
-    right: 14%;
-    top: 30px;
   }
 
   .step-content {
@@ -1554,48 +1513,41 @@ h3,
   font-size: 14px;
 }
 
-/* Decorative dotted route */
-.route-art {
+/* Google My Maps embed — real, live business locations. */
+.delivery-map-frame {
   position: relative;
-  height: 245px;
-  border-radius: 50%;
-  background: radial-gradient(circle, #3a7eff 2px, transparent 2px);
-  background-size: 26px 26px;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 16px;
 }
 
-.route {
+/* Google's header bar is a fixed-height toolbar (doesn't scale with the
+   iframe), so this is a fixed px crop, not a percentage: the iframe is
+   45px taller than its frame and shifted up by the same amount, pushing
+   that bar above the clipped area regardless of the frame's own size. */
+.delivery-map {
   position: absolute;
-  top: 47%;
-  left: 5%;
-  right: 5%;
-  letter-spacing: 3px;
-  transform: rotate(-8deg);
+  top: -45px;
+  left: 0;
+  width: 100%;
+  height: calc(100% + 45px);
+  border: 0;
 }
 
-.pin,
-.box {
+.delivery-map-title {
   position: absolute;
-  font-size: 45px;
-}
-
-.pin {
-  left: 4%;
-  top: 35%;
-}
-
-.box {
-  right: 4%;
-  top: 50%;
-}
-
-.route-art b {
-  position: absolute;
-  right: 25%;
-  top: 32%;
-  padding: 9px 14px;
+  top: 16px;
+  left: 16px;
+  z-index: 1;
+  padding: 8px 14px;
   border-radius: 8px;
-  background: var(--white);
-  color: var(--blue);
+  background: var(--blue);
+  color: var(--white);
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 400;
+  box-shadow: 0 6px 16px rgba(11, 31, 58, 0.25);
 }
 
 @media (max-width: 900px) {
@@ -1607,83 +1559,6 @@ h3,
 @media (max-width: 600px) {
   .delivery-times {
     flex-direction: column;
-  }
-
-  .route-art {
-    height: 210px;
-  }
-}
-
-/* --------------------------------------------------------------------------
-   Coverage map
-   -------------------------------------------------------------------------- */
-
-.map-section {
-  background: #fbfdff;
-}
-
-.map-wrap {
-  position: relative;
-  max-width: 880px;
-  margin: auto;
-}
-
-.map-wrap svg {
-  width: 100%;
-  overflow: visible;
-}
-
-.map-pin circle:first-child {
-  fill: var(--blue);
-  opacity: 0.17;
-  animation: pulse 2s infinite;
-}
-
-.map-pin circle:nth-child(2) {
-  fill: var(--blue);
-  stroke: var(--white);
-  stroke-width: 2;
-}
-
-.map-pin text {
-  fill: var(--dark);
-  font-size: 11px;
-  font-weight: 800;
-  opacity: 0;
-  transition: 0.2s;
-}
-
-.map-pin:hover text {
-  opacity: 1;
-}
-
-.map-note {
-  position: absolute;
-  right: 4%;
-  bottom: 8%;
-  padding: 12px 18px;
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  background: var(--white);
-  box-shadow: 0 10px 30px #cbd8e8;
-  font-size: 12px;
-  font-weight: 800;
-}
-
-.map-note span {
-  color: var(--blue);
-}
-
-@media (max-width: 600px) {
-  /* No hover on touch, so the city labels stay visible. */
-  .map-pin text {
-    font-size: 9px;
-    opacity: 1;
-  }
-
-  .map-note {
-    position: relative;
-    float: right;
   }
 }
 
@@ -1704,14 +1579,23 @@ h3,
 
 .partner-logo {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 12px;
-  width: 165px;
-  height: 76px;
+  gap: 4px;
+  width: 110px;
+  height: 110px;
   border: 1px solid var(--line);
-  border-radius: 16px;
+  border-radius: 50%;
+  overflow: hidden;
   color: #8090a5;
+}
+
+.partner-logo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .partner-logo span {
@@ -1723,6 +1607,13 @@ h3,
   font-style: normal;
   font-weight: 800;
   letter-spacing: 0.2em;
+}
+
+@media (max-width: 600px) {
+  .partner-logo {
+    width: 84px;
+    height: 84px;
+  }
 }
 
 /* --------------------------------------------------------------------------
@@ -1925,7 +1816,7 @@ h3,
   border-radius: 28px;
   background: var(--blue);
   color: var(--white);
-  box-shadow: 0 30px 70px rgba(11, 92, 255, 0.25);
+  box-shadow: 0 30px 70px rgba(11, 31, 58, 0.22);
 }
 
 .order-inner img {
@@ -2143,13 +2034,6 @@ footer {
 @keyframes customer-scroll {
   to {
     transform: translateX(calc(-50% - 7px));
-  }
-}
-
-@keyframes pulse {
-  50% {
-    r: 21;
-    opacity: 0;
   }
 }
 

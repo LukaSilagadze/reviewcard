@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Logo } from "./Logo";
 import { SocialLinks } from "./SocialLinks";
 import { contact } from "../config/siteConfig";
@@ -20,7 +20,6 @@ function LanguageMenu({ lang, setLang, t }) {
       >
         <img src={active.flag} alt="" width="25" height="17" />
         <span>{active.short}</span>
-        <b aria-hidden="true">⌄</b>
       </button>
 
       {open && (
@@ -47,11 +46,22 @@ function LanguageMenu({ lang, setLang, t }) {
 
 export function SiteHeader({ lang, setLang, t, activeNav, setActiveNav, onOrder }) {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [pastHero, setPastHero] = useState(false);
 
   const selectSection = (id) => {
     setActiveNav(id);
     setMenuOpen(false);
   };
+
+  // Drives the phone-only fixed order bar: hidden while the hero (with its
+  // own in-content CTA) is still on screen, shown once it's scrolled past.
+  useEffect(() => {
+    const hero = document.querySelector(".hero");
+    if (!hero) return;
+    const observer = new IntersectionObserver(([entry]) => setPastHero(!entry.isIntersecting));
+    observer.observe(hero);
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <header className="site-header">
@@ -105,14 +115,22 @@ export function SiteHeader({ lang, setLang, t, activeNav, setActiveNav, onOrder 
                 {t.nav[id]}
               </a>
             ))}
-
-            <button className="mobile-order" onClick={onOrder}>
-              {t.order} ↗
-            </button>
           </nav>
 
-          <SocialLinks />
+          <div className="header-actions">
+            <SocialLinks />
+            {/* Hidden below 700px — the fixed mobile-order-bar takes over there. */}
+            <button className="header-order" onClick={onOrder}>
+              {t.primary}
+            </button>
+          </div>
         </div>
+      </div>
+
+      {/* Phone-only: a fixed bottom bar, shown once the hero (and its own
+          order button) has scrolled out of view. */}
+      <div className={`mobile-order-bar${pastHero ? " is-visible" : ""}`}>
+        <button onClick={onOrder}>{t.primary}</button>
       </div>
     </header>
   );

@@ -54,6 +54,19 @@ const jobs = [
     },
   ]),
 
+  // How-it-works step cards — fixed-height tiles (~410px, ~390px on
+  // tablet/mobile) in a 3-up (1-up on phone) grid, roughly 0.85 aspect.
+  // A dark gradient + the step text sit on top of these, same treatment
+  // as the hero photos.
+  ...["step1", "step2", "step3"].map((name) => ({
+    in: `${name}.jpg`,
+    out: `${name}.webp`,
+    width: 700,
+    height: 824,
+    position: "attention",
+    quality: 78,
+  })),
+
   // Painted at 43-72px in the page.
   { in: "icon.png", out: "icon.webp", width: 256, quality: 82 },
   // Favicon needs a raster format every browser accepts.
@@ -93,6 +106,34 @@ const jobs = [
     height: 600,
     position: "south",
     quality: 76,
+  })),
+
+  // Partner logo marquee — round 110px tile (84px on mobile). Every source
+  // logo is already near-square (each business supplied theirs as roughly
+  // a social-profile-picture crop), so a plain centred cover crop doesn't
+  // lose any of the mark, unlike the photo sets above.
+  ...[
+    ["astralfitness", "jpg"],
+    ["burgerking", "webp"],
+    ["carpology-logo", "png"],
+    ["f1shopgeorgia", "jpg"],
+    ["grossmann", "png"],
+    ["gtline", "jpg"],
+    ["kartinglilo", "jpg"],
+    ["logo-png", "webp"],
+    ["luxink", "jpg"],
+    ["meamacollect", "png"],
+    ["pizzamedici", "png"],
+    ["pkdental", "png"],
+    ["techauto", "jpg"],
+    ["undergroundarena", "jpg"],
+    ["zooarea", "jpg"],
+  ].map(([name, ext]) => ({
+    in: `partner_logos/${name}.${ext}`,
+    out: `partner_logos/${name}.webp`,
+    width: 220,
+    height: 220,
+    quality: 82,
   })),
 ];
 

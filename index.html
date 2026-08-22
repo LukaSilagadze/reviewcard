@@ -22,10 +22,12 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&family=Noto+Sans+Georgian:wght@400;700;800&display=swap"
     />
-    <!-- The hero background is the largest paint on the page. Preload it, but
-         match the media queries in global.css so only one rendition is fetched. -->
-    <link rel="preload" as="image" href="/assets/hero-product-v2.webp" media="(min-width: 601px)" fetchpriority="high" />
-    <link rel="preload" as="image" href="/assets/hero-product-v2-800.webp" media="(max-width: 600px)" fetchpriority="high" />
+    <!-- The hero background is the largest paint on the page — preload
+         whichever image actually paints first, matching Hero.jsx's own
+         breakpoint (below it the carousel switches to customer-gallery
+         photos instead of the wide product shots). -->
+    <link rel="preload" as="image" href="/assets/hero1.png" media="(min-width: 601px)" fetchpriority="high" />
+    <link rel="preload" as="image" href="/assets/customer-gallery/dekaroom.webp" media="(max-width: 600px)" fetchpriority="high" />
   </head>
   <body>
     <div id="root"></div>
