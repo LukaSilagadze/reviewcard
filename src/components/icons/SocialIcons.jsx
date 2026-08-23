@@ -14,6 +14,7 @@ import {
   faTiktok,
   faWhatsapp,
 } from "@fortawesome/free-brands-svg-icons";
+import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 export function InstagramIcon(props) {
   return <FontAwesomeIcon icon={faInstagram} {...props} />;
@@ -29,6 +30,14 @@ export function TikTokIcon(props) {
 
 export function WhatsAppIcon(props) {
   return <FontAwesomeIcon icon={faWhatsapp} {...props} />;
+}
+
+export function PhoneIcon(props) {
+  return <FontAwesomeIcon icon={faPhone} {...props} />;
+}
+
+export function EnvelopeIcon(props) {
+  return <FontAwesomeIcon icon={faEnvelope} {...props} />;
 }
 
 export const socialIcons = {

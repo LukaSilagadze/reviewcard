@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Logo } from "./Logo";
 import { SocialLinks } from "./SocialLinks";
+import { PhoneIcon, EnvelopeIcon } from "./icons/SocialIcons";
 import { contact } from "../config/siteConfig";
 import { navSections } from "../data/navigation";
 import { languages, languageNames } from "../i18n/translations";
@@ -105,11 +106,11 @@ export function SiteHeader({ lang, setLang, t, activeNav, setActiveNav, onOrder 
 
           <div className="header-info">
             <a href={`tel:${contact.phone.replace(/\s/g, "")}`}>
-              <span aria-hidden="true">☎</span>
+              <PhoneIcon aria-hidden="true" />
               {contact.phone}
             </a>
             <a href={`mailto:${contact.email}`}>
-              <span aria-hidden="true">✉</span>
+              <EnvelopeIcon aria-hidden="true" />
               {contact.email}
             </a>
           </div>
