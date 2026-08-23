@@ -1,7 +1,23 @@
+import { useEffect, useRef } from "react";
 import { SocialIcon } from "./SocialLinks";
 import { orderChannels } from "../config/siteConfig";
 
 export function OrderModal({ t, onClose }) {
+  const closeRef = useRef(null);
+
+  useEffect(() => {
+    const previouslyFocused = document.activeElement;
+    closeRef.current?.focus();
+
+    const onKeyDown = (e) => e.key === "Escape" && onClose();
+    document.addEventListener("keydown", onKeyDown);
+
+    return () => {
+      document.removeEventListener("keydown", onKeyDown);
+      previouslyFocused?.focus?.();
+    };
+  }, [onClose]);
+
   return (
     <div
       className="modal"
@@ -11,7 +27,7 @@ export function OrderModal({ t, onClose }) {
       onMouseDown={(e) => e.target === e.currentTarget && onClose()}
     >
       <div>
-        <button className="close" onClick={onClose} aria-label={t.a11y.close}>
+        <button ref={closeRef} className="close" onClick={onClose} aria-label={t.a11y.close}>
           ×
         </button>
 

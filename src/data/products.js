@@ -3,7 +3,6 @@
  *
  * `id`       also selects the `p-<id>` CSS hook and the description in
  *            `copy[lang].productDescriptions`.
- * `tag`      short category label, shown in the Prices table.
  * `mark`     glyph shown on the fallback mock-up when there is no photo.
  * `caption`  small line under the mark on the fallback mock-up.
  * `pricing`  volume tiers in GEL, cheapest per unit at higher quantity.
@@ -15,8 +14,7 @@ export const products = [
   {
     id: "card",
     name: "Google Review Card",
-    image: "/assets/gw_card.jpg",
-    tag: "NFC + QR",
+    image: "/assets/gw_card.webp",
     mark: "G",
     caption: "★★★★★",
     pricing: [
@@ -29,7 +27,6 @@ export const products = [
     id: "stand",
     name: "Google Review Stand",
     image: "/assets/gw_stand.webp",
-    tag: "NFC + QR",
     mark: "G",
     caption: "★★★★★",
     pricing: [
@@ -41,8 +38,7 @@ export const products = [
   {
     id: "sticker",
     name: "Google Review Sticker",
-    image: "/assets/sticker.jpg",
-    tag: "NFC + QR",
+    image: "/assets/sticker.webp",
     mark: "G",
     caption: "★★★★★",
     pricing: [
@@ -54,8 +50,7 @@ export const products = [
   {
     id: "instagram",
     name: "Instagram Follow Us Card",
-    image: "/assets/ig_card.jpg",
-    tag: "SOCIAL NFC",
+    image: "/assets/ig_card.webp",
     mark: "◎",
     caption: "Follow us",
     // Same physical product as `card`, just programmed for a different link.
@@ -68,8 +63,7 @@ export const products = [
   {
     id: "facebook",
     name: "Facebook Follow Us Card",
-    image: "/assets/fb_card.jpg",
-    tag: "SOCIAL NFC",
+    image: "/assets/fb_card.webp",
     mark: "f",
     caption: "Follow us",
     pricing: [

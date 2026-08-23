@@ -26,13 +26,6 @@ export const contact = {
   email: "reviewcard0@gmail.com",
 };
 
-/**
- * Testimonial screenshots are still placeholders — that section renders
- * generic tiles until real ones land. Replace each entry with
- * `{ name, screenshot }` and update Testimonials.jsx.
- */
-export const testimonials = Array.from({ length: 5 }, (_, i) => ({ id: i + 1 }));
-
 export const partners = [
   ["carpology-logo", "Carpology Shop"],
   ["f1shopgeorgia", "F1 Shop Georgia"],
@@ -51,9 +44,9 @@ export const partners = [
 ].map(([id, name]) => ({ id, name, logo: `/assets/partner_logos/${id}.webp` }));
 
 export const customerGallery = [
+  "burgerking.webp",
   "dekaroom.webp",
   "dekaroomdesk.webp",
-  "burgerking.jpg",
   "grossmann.webp",
   "grossmannbg.webp",
   "gtline.webp",
@@ -66,14 +59,5 @@ export const customerGallery = [
   "fishingshop.webp"
 ].map((name) => `/assets/customer-gallery/${name}`);
 
-/**
- * Hero background carousel. `desktop`/`mobile` are two crops of the same
- * shot (see scripts/optimize-images.mjs) swapped by viewport width, matching
- * the rest of the site's responsive-image approach.
- */
-export const heroSlides = ["hero1", "hero2", "hero3"].map(
-  (name) => ({
-    desktop: `/assets/${name}.png`,
-    mobile: `/assets/${name}-800.png`,
-  }),
-);
+/** Hero background carousel — desktop/tablet only, see Hero.jsx. */
+export const heroSlides = ["hero1", "hero2", "hero3"].map((name) => `/assets/${name}.webp`);

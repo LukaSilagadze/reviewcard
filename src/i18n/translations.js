@@ -33,14 +33,6 @@ export const copy = {
       "ReviewCard ეხმარება შენს მომხმარებლებს მარტივად გახსნან შენი Google შეფასების გვერდი ტელეფონის ერთი შეხებით",
     primary: "შეუკვეთე",
 
-    /** The strip directly under the hero. Icon per entry lives in the component. */
-    heroBenefits: [
-      ["მარტივი მომხმარებლისთვის", "აპლიკაცია არ არის საჭირო"],
-      ["სწრაფი", "დაახლოებით 2 სამუშაო დღე"],
-      ["NFC", "ორივე ტექნოლოგია ერთ ბარათზე"],
-      ["აპის გარეშე", "მზადაა მიღებისთანავე"],
-    ],
-
     customersLabel: "ReviewCard-ის მომხმარებლები",
     customerPhotoAlt: "მომხმარებლის ფოტო",
 
@@ -70,16 +62,6 @@ export const copy = {
     pricesEach: "თითო",
     pricesNote: "ფასები მითითებულია ერთ ცალზე, ლარში (₾).",
 
-    benefitsTitle: "ყველაფერი, რაც საჭიროა — და არაფერი ზედმეტი",
-    benefits: [
-      "მარტივი მომხმარებლისთვის",
-      "სწრაფი",
-      "NFC + QR",
-      "აპის გარეშე",
-      "შენს ბიზნესზე მორგებული",
-      "მზადაა გამოსაყენებლად",
-    ],
-
     delivery: "მიწოდება მთელ საქართველოში",
     deliveryText:
       "არ აქვს მნიშვნელობა სად მდებარეობს შენი ბიზნესი — ReviewCard-ს საქართველოს ნებისმიერ რეგიონში მოგაწვდით.",
@@ -93,9 +75,6 @@ export const copy = {
 
     partners: "ბიზნესები, რომლებმაც ReviewCard აირჩიეს",
     partnerLogoPlaceholder: "ლოგო",
-
-    testimonials: "მომხმარებლების გამოცდილება",
-    testimonialPlaceholder: "შეფასების სქრინშოტი",
 
     faqTitle: "ხშირად დასმული კითხვები",
     faqPrompt: "ვერ იპოვე პასუხი? მოგვწერე — სიამოვნებით დაგეხმარებით.",
@@ -142,8 +121,6 @@ export const copy = {
       home: "ReviewCard — მთავარი",
       toggleMenu: "მენიუს გახსნა",
       chooseLanguage: "აირჩიე ენა",
-      previous: "წინა",
-      next: "შემდეგი",
       close: "დახურვა",
     },
   },
@@ -165,13 +142,6 @@ export const copy = {
     intro:
       "ReviewCard helps your customers easily open your Google review page with one tap of the phone",
     primary: "Order",
-
-    heroBenefits: [
-      ["Easy for customers", "No app required"],
-      ["Fast", "Around 2 working days"],
-      ["NFC", "Both technologies on one card"],
-      ["No app required", "Ready as soon as it arrives"],
-    ],
 
     customersLabel: "ReviewCard customers",
     customerPhotoAlt: "Customer photo",
@@ -201,16 +171,6 @@ export const copy = {
     pricesEach: "each",
     pricesNote: "Prices shown per unit, in Georgian Lari (₾).",
 
-    benefitsTitle: "Everything you need — and nothing extra.",
-    benefits: [
-      "Easy for customers",
-      "Fast",
-      "NFC + QR",
-      "No app required",
-      "Tailored to your business",
-      "Ready to use",
-    ],
-
     delivery: "Delivery across all of Georgia",
     deliveryText:
       "Wherever your business is located, we deliver ReviewCard to every region of Georgia.",
@@ -224,9 +184,6 @@ export const copy = {
 
     partners: "Businesses that chose ReviewCard",
     partnerLogoPlaceholder: "LOGO",
-
-    testimonials: "Customer experiences",
-    testimonialPlaceholder: "Review screenshot",
 
     faqTitle: "Frequently asked questions",
     faqPrompt: "Couldn't find the answer? Message us — we'll be happy to help.",
@@ -270,8 +227,6 @@ export const copy = {
       home: "ReviewCard — Home",
       toggleMenu: "Open menu",
       chooseLanguage: "Choose language",
-      previous: "Previous",
-      next: "Next",
       close: "Close",
     },
   },

@@ -2,15 +2,13 @@ import { useState } from "react";
 import { useLanguage } from "./hooks/useLanguage";
 
 import { SiteHeader } from "./components/SiteHeader";
-import { Hero, HeroBenefits } from "./components/Hero";
+import { Hero } from "./components/Hero";
 import { CustomerCarousel } from "./components/CustomerCarousel";
 import { HowItWorks } from "./components/HowItWorks";
 import { Products } from "./components/Products";
 import { Prices } from "./components/Prices";
-import { Benefits } from "./components/Benefits";
 import { Delivery } from "./components/Delivery";
 import { Partners } from "./components/Partners";
-import { Testimonials } from "./components/Testimonials";
 import { Faq } from "./components/Faq";
 import { OrderCta } from "./components/OrderCta";
 import { SiteFooter } from "./components/SiteFooter";

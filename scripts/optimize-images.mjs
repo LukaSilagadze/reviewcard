@@ -24,35 +24,20 @@ const out = join(root, "public", "assets");
 const jobs = [
   { in: "gw_card.jpg", out: "gw_card.webp", width: 750, quality: 78 },
   { in: "gw_stand.jpg", out: "gw_stand.webp", width: 750, quality: 78 },
+  { in: "sticker.jpg", out: "sticker.webp", width: 750, quality: 78 },
   { in: "ig_card.jpg", out: "ig_card.webp", width: 750, quality: 78 },
   { in: "fb_card.jpg", out: "fb_card.webp", width: 750, quality: 78 },
 
-  // Full-bleed hero carousel. Two widths per slide, swapped by media query
-  // in global.css. The product shots are portrait masters (0.75 aspect)
-  // force-cropped to the hero's much wider ~1.93 — a lot gets cut, but the
-  // hero's dark overlay gradient sits on top of all of it anyway, so an
-  // attention crop centering on the card reads fine as a moody backdrop
-  // rather than needing to be a well-composed standalone photo.
-  { in: "hero-product-v2.png", out: "hero-product-v2.webp", width: 1744, quality: 72 },
-  { in: "hero-product-v2.png", out: "hero-product-v2-800.webp", width: 800, quality: 70 },
-  ...["gw_card", "gw_stand", "ig_card", "fb_card"].flatMap((name) => [
-    {
-      in: `${name}.jpg`,
-      out: `hero-${name}.webp`,
-      width: 1744,
-      height: 902,
-      position: "attention",
-      quality: 72,
-    },
-    {
-      in: `${name}.jpg`,
-      out: `hero-${name}-800.webp`,
-      width: 800,
-      height: 414,
-      position: "attention",
-      quality: 70,
-    },
-  ]),
+  // Full-bleed hero carousel backdrop (desktop/tablet only — below 600px
+  // Hero.jsx swaps in the customer-gallery photos instead). Masters are
+  // already shot at the hero's own wide aspect, so this is a plain width
+  // constrain, no crop needed.
+  ...["hero1", "hero2", "hero3"].map((name) => ({
+    in: `${name}.png`,
+    out: `${name}.webp`,
+    width: 1920,
+    quality: 72,
+  })),
 
   // How-it-works step cards — fixed-height tiles (~410px, ~390px on
   // tablet/mobile) in a 3-up (1-up on phone) grid, roughly 0.85 aspect.
@@ -87,6 +72,7 @@ const jobs = [
   // content-aware auto-cropping did (which kept favoring bright signage
   // over the actual product).
   ...[
+    "burgerking",
     "dekaroom",
     "dekaroomdesk",
     "fishingshop",
@@ -114,7 +100,7 @@ const jobs = [
   // lose any of the mark, unlike the photo sets above.
   ...[
     ["astralfitness", "jpg"],
-    ["burgerking", "webp"],
+    ["burgerking", "png"],
     ["carpology-logo", "png"],
     ["f1shopgeorgia", "jpg"],
     ["grossmann", "png"],

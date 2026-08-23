@@ -25,12 +25,9 @@ function useMatches(query) {
   return matches;
 }
 
-/** Icons for the four cards in the strip below the hero. */
-const BENEFIT_ICONS = ["⚙", "⚡", "◉", "✓"];
-
 function HeroCarousel() {
   const isSmallScreen = useMatches(SMALL_SCREEN_QUERY);
-  const slides = isSmallScreen ? customerGallery : heroSlides.map((s) => s.desktop);
+  const slides = isSmallScreen ? customerGallery : heroSlides;
   const [active, setActive] = useState(0);
 
   // The two slide sets are different lengths — reset so `active` can't point
@@ -85,23 +82,5 @@ export function Hero({ t, onOrder }) {
         </div>
       </div>
     </section>
-  );
-}
-
-export function HeroBenefits({ t }) {
-  return (
-    <div className="hero-benefits">
-      <div className="container">
-        {t.heroBenefits.map(([title, detail], i) => (
-          <div key={title}>
-            <span aria-hidden="true">{BENEFIT_ICONS[i]}</span>
-            <p>
-              <b>{title}</b>
-              <small>{detail}</small>
-            </p>
-          </div>
-        ))}
-      </div>
-    </div>
   );
 }

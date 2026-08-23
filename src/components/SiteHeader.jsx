@@ -63,6 +63,40 @@ export function SiteHeader({ lang, setLang, t, activeNav, setActiveNav, onOrder 
     return () => observer.disconnect();
   }, []);
 
+  // Keeps the nav's active-link underline in sync while the user scrolls
+  // freely, not just when they click a link. Watches a thin band just below
+  // the sticky header — whichever section's top edge is currently crossing
+  // it is "current" — instead of clicking being the only way to update it.
+  useEffect(() => {
+    const sections = ["top", ...navSections]
+      .map((id) => ({ id, el: id === "top" ? document.querySelector(".hero") : document.getElementById(id) }))
+      .filter((s) => s.el);
+    if (!sections.length) return;
+
+    // A callback only reports targets whose intersection state just changed,
+    // not every target currently intersecting — so on a fast or jump scroll
+    // (multiple sections entering/leaving between two callbacks) the "active"
+    // pick has to come from a running set, not just this call's entries.
+    const intersecting = new Map();
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) intersecting.set(entry.target, entry.boundingClientRect.top);
+          else intersecting.delete(entry.target);
+        }
+        if (!intersecting.size) return;
+        const topmostEl = [...intersecting.entries()].reduce((a, b) => (a[1] < b[1] ? a : b))[0];
+        const match = sections.find((s) => s.el === topmostEl);
+        if (match) setActiveNav(match.id);
+      },
+      { rootMargin: "-45% 0px -50% 0px" },
+    );
+
+    sections.forEach((s) => observer.observe(s.el));
+    return () => observer.disconnect();
+  }, [setActiveNav]);
+
   return (
     <header className="site-header">
       <div className="header-top">
