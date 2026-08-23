@@ -4,19 +4,13 @@ import { copy, languages } from "../i18n/translations";
 const STORAGE_KEY = "reviewcard:lang";
 const DEFAULT_LANG = "ka";
 
-/** Last explicit choice, else the browser's preference, else Georgian. */
+/** Last explicit choice, else Georgian. */
 function detectLanguage() {
   try {
     const stored = localStorage.getItem(STORAGE_KEY);
     if (stored && languages.includes(stored)) return stored;
   } catch {
-    // Private browsing or blocked storage — fall through to detection.
-  }
-
-  const preferred = navigator.languages ?? [navigator.language];
-  for (const tag of preferred) {
-    const base = String(tag).toLowerCase().split("-")[0];
-    if (languages.includes(base)) return base;
+    // Private browsing or blocked storage — fall through to the default.
   }
 
   return DEFAULT_LANG;

@@ -127,6 +127,12 @@ export function SiteHeader({ lang, setLang, t, activeNav, setActiveNav, onOrder 
         </div>
       </div>
 
+      {/* Phone-only: dims the rest of the page while the drawer is open and
+          closes it on tap, so users aren't forced to hit the × button. */}
+      {menuOpen && (
+        <div className="nav-backdrop" onClick={() => setMenuOpen(false)} aria-hidden="true" />
+      )}
+
       {/* Phone-only: a fixed bottom bar, shown once the hero (and its own
           order button) has scrolled out of view. */}
       <div className={`mobile-order-bar${pastHero ? " is-visible" : ""}`}>

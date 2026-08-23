@@ -28,17 +28,10 @@ export const copy = {
       faq: "ხშირი კითხვები",
     },
 
-    order: "შეკვეთა",
     hero: "გაუმარტივე შენს მომხმარებელს შეფასების დატოვება",
     intro:
       "ReviewCard ეხმარება შენს მომხმარებლებს მარტივად გახსნან შენი Google შეფასების გვერდი ტელეფონის ერთი შეხებით",
     primary: "შეუკვეთე",
-
-    trust: [
-      "მიწოდება მთელ საქართველოში",
-      "NFC",
-      "აპლიკაცია არ არის საჭირო",
-    ],
 
     /** The strip directly under the hero. Icon per entry lives in the component. */
     heroBenefits: [
@@ -62,7 +55,6 @@ export const copy = {
     products: "შეარჩიე შენი ReviewCard",
     productsSub:
       "ყველა პროდუქტი ინდივიდუალურად პროგრამირდება შენი ბიზნესისთვის.",
-    price: "ფასი მალე დაემატება",
     productDescriptions: {
       card: "NFC ბარათი, რომელიც ხსნის ბიზნესის Google შეფასების გვერდს.",
       stand: "სტენდი კაფეებისთვის, რესტორნებისთვის, სალონებისა და მაღაზიებისთვის.",
@@ -161,7 +153,7 @@ export const copy = {
 
     nav: {
       home: "Home",
-      products: "Products",
+      products: "Cards",
       prices: "Prices",
       how: "How it works",
       delivery: "Delivery",
@@ -169,19 +161,16 @@ export const copy = {
       faq: "FAQ",
     },
 
-    order: "Order",
-    hero: "Get more Google reviews with one tap",
+    hero: "Make it easier for your customers to leave a review",
     intro:
-      "ReviewCard helps customers open your Google review page instantly with one phone tap",
-    primary: "Order ReviewCard",
-
-    trust: ["Delivery across Georgia", "NFC + QR", "No app required"],
+      "ReviewCard helps your customers easily open your Google review page with one tap of the phone",
+    primary: "Order",
 
     heroBenefits: [
       ["Easy for customers", "No app required"],
       ["Fast", "Around 2 working days"],
-      ["NFC + QR", "Both on every card"],
-      ["No app required", "Ready out of the box"],
+      ["NFC", "Both technologies on one card"],
+      ["No app required", "Ready as soon as it arrives"],
     ],
 
     customersLabel: "ReviewCard customers",
@@ -190,36 +179,35 @@ export const copy = {
     howTitle: "How it works",
     stepLabel: "Step",
     steps: [
-      ["Tap a phone on ReviewCard", "Or scan the QR code."],
-      ["The right page opens", "Directly in the browser, with no app."],
-      ["Your customer leaves a review", "In just a few seconds."],
+      ["Tap your phone on ReviewCard"],
+      ["The right page opens"],
+      ["The customer leaves a review"],
     ],
 
     products: "Choose your ReviewCard",
-    productsSub: "Every product is programmed specifically for your business.",
-    price: "Price coming soon",
+    productsSub: "Every product is individually programmed for your business.",
     productDescriptions: {
-      card: "NFC + QR card that opens the business's Google review page.",
-      stand: "A countertop version for cafés, restaurants, salons and stores.",
-      sticker: "A compact NFC + QR sticker for counters, tables or other surfaces.",
+      card: "NFC card that opens the business's Google review page.",
+      stand: "A stand for cafés, restaurants, salons and stores.",
+      sticker: "A compact NFC sticker for counters, tables or other surfaces.",
       instagram: "Opens the business's Instagram page with one tap.",
       facebook: "Opens the business's Facebook page with one tap.",
     },
 
     pricesTitle: "Prices",
-    pricesSub: "The more you order, the less each one costs.",
+    pricesSub: "The more you order, the cheaper each unit is.",
     pricesProduct: "Product",
     pricesUnit: "pcs",
     pricesEach: "each",
     pricesNote: "Prices shown per unit, in Georgian Lari (₾).",
 
-    benefitsTitle: "Everything you need. Nothing you don’t.",
+    benefitsTitle: "Everything you need — and nothing extra.",
     benefits: [
       "Easy for customers",
       "Fast",
       "NFC + QR",
       "No app required",
-      "Made for your business",
+      "Tailored to your business",
       "Ready to use",
     ],
 
@@ -232,7 +220,7 @@ export const copy = {
     otherTime: "2–4 working days",
 
     deliveryMapTitle: "Map — businesses using ReviewCard across Georgia",
-    deliveryMapLabel: "ReviewCard businesses",
+    deliveryMapLabel: "ReviewCard across Georgia",
 
     partners: "Businesses that chose ReviewCard",
     partnerLogoPlaceholder: "LOGO",
@@ -241,7 +229,7 @@ export const copy = {
     testimonialPlaceholder: "Review screenshot",
 
     faqTitle: "Frequently asked questions",
-    faqPrompt: "Still have a question? Message us — we’ll be happy to help.",
+    faqPrompt: "Couldn't find the answer? Message us — we'll be happy to help.",
     faqs: [
       [
         "How does ReviewCard work?",
@@ -251,7 +239,10 @@ export const copy = {
         "Does it work on every phone?",
         "It works with most modern NFC-enabled smartphones. QR provides an alternative.",
       ],
-      ["Does the customer need an app?", "No."],
+      [
+        "Does the customer need an app?",
+        "No. No additional app is required.",
+      ],
       [
         "Can it be programmed for my business?",
         "Yes. Each ReviewCard is configured for the specific business.",
@@ -270,14 +261,14 @@ export const copy = {
     whereText: "Choose the platform that works best for you.",
 
     footer:
-      "A simpler way to get more Google reviews and social media followers.",
+      "A simple way to get more Google reviews and social media followers.",
     footerNav: "Navigation",
     footerSocial: "Social media",
     copyright: "Made for growing businesses in Georgia.",
 
     a11y: {
-      home: "ReviewCard home",
-      toggleMenu: "Toggle menu",
+      home: "ReviewCard — Home",
+      toggleMenu: "Open menu",
       chooseLanguage: "Choose language",
       previous: "Previous",
       next: "Next",
