@@ -6,7 +6,6 @@ function CatalogMockup({ product }) {
     <div className="catalog-mockups">
       <span className="mock mock-back">
         <b>{product.mark}</b>
-        <small>QR</small>
       </span>
       <span className="mock mock-front">
         <small>tap to connect</small>

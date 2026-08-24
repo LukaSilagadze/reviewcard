@@ -28,9 +28,9 @@ export const copy = {
       faq: "ხშირი კითხვები",
     },
 
-    hero: "გაუმარტივე შენს მომხმარებელს შეფასების დატოვება",
+    hero: "მიიღე მეტი Google შეფასება NFC ბარათით",
     intro:
-      "ReviewCard ეხმარება შენს მომხმარებლებს მარტივად გახსნან შენი Google შეფასების გვერდი ტელეფონის ერთი შეხებით",
+      "ReviewCard-ის NFC ბარათი ეხმარება შენს მომხმარებლებს მარტივად გახსნან შენი Google შეფასების გვერდი ტელეფონის ერთი შეხებით",
     primary: "შეუკვეთე",
 
     customersLabel: "ReviewCard-ის მომხმარებლები",
@@ -44,7 +44,7 @@ export const copy = {
       ["კლიენტი მარტივად ტოვებს შეფასებას"],
     ],
 
-    products: "შეარჩიე შენი ReviewCard",
+    products: "შეარჩიე შენი Google Review ბარათი",
     productsSub:
       "ყველა პროდუქტი ინდივიდუალურად პროგრამირდება შენი ბიზნესისთვის.",
     productDescriptions: {
@@ -81,11 +81,11 @@ export const copy = {
     faqs: [
       [
         "როგორ მუშაობს ReviewCard?",
-        "ტელეფონის შეხებით იხსნება მითითებული გვერდი. ასევე შესაძლებელია QR კოდის დასკანერება.",
+        "ტელეფონის შეხებით იხსნება მითითებული გვერდი.",
       ],
       [
         "ყველა ტელეფონზე მუშაობს?",
-        "მუშაობს თანამედროვე NFC-ის მქონე სმარტფონების უმეტესობაზე. QR კოდი ალტერნატივაა.",
+        "მუშაობს თანამედროვე NFC-ის მქონე სმარტფონების უმეტესობაზე.",
       ],
       [
         "სჭირდება მომხმარებელს აპლიკაცია?",
@@ -138,9 +138,9 @@ export const copy = {
       faq: "FAQ",
     },
 
-    hero: "Make it easier for your customers to leave a review",
+    hero: "Get more Google reviews with an NFC review card",
     intro:
-      "ReviewCard helps your customers easily open your Google review page with one tap of the phone",
+      "ReviewCard's NFC card helps your customers easily open your Google review page with one tap of the phone",
     primary: "Order",
 
     customersLabel: "ReviewCard customers",
@@ -154,7 +154,7 @@ export const copy = {
       ["The customer leaves a review"],
     ],
 
-    products: "Choose your ReviewCard",
+    products: "Choose your Google Review card",
     productsSub: "Every product is individually programmed for your business.",
     productDescriptions: {
       card: "NFC card that opens the business's Google review page.",
@@ -190,11 +190,11 @@ export const copy = {
     faqs: [
       [
         "How does ReviewCard work?",
-        "Tapping the phone opens the configured page. QR scanning is also available.",
+        "Tapping the phone opens the configured page.",
       ],
       [
         "Does it work on every phone?",
-        "It works with most modern NFC-enabled smartphones. QR provides an alternative.",
+        "It works with most modern NFC-enabled smartphones.",
       ],
       [
         "Does the customer need an app?",
