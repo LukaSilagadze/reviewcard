@@ -34,12 +34,12 @@ export default function App() {
 
       <main id="top">
         <Hero t={t} onOrder={openOrder} />
+        <Partners t={t} />
         <CustomerCarousel t={t} />
         <HowItWorks t={t} />
         <Products t={t} />
         <Prices t={t} />
         <Delivery t={t} />
-        <Partners t={t} />
         <Faq t={t} onOrder={openOrder} />
         <OrderCta t={t} onOrder={openOrder} />
       </main>
