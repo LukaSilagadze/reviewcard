@@ -34,7 +34,7 @@ export function Prices({ t }) {
             <tbody>
               {priced.map((product) => (
                 <tr key={product.id}>
-                  <th scope="row">{product.name}</th>
+                  <th scope="row">{t.productNames[product.id]}</th>
                   {product.pricing.map((tier) => (
                     <td key={tier.qty}>
                       {tier.price} ₾ <small>{t.pricesEach}</small>

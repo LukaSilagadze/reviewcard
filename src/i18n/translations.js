@@ -16,7 +16,7 @@ export const languageNames = {
 
 export const copy = {
   ka: {
-    documentTitle: "ReviewCard | მიიღე მეტი Google შეფასება",
+    documentTitle: "შეფასების ბარათი და გუგლის შეფასების დასადგამი | ReviewCard",
 
     nav: {
       home: "მთავარი",
@@ -28,9 +28,9 @@ export const copy = {
       faq: "ხშირი კითხვები",
     },
 
-    hero: "მიიღე მეტი Google შეფასება NFC ბარათით",
+    hero: "NFC გუგლის შეფასების ბარათები ბიზნესებისთვის",
     intro:
-      "ReviewCard-ის NFC ბარათი ეხმარება შენს მომხმარებლებს მარტივად გახსნან შენი Google შეფასების გვერდი ტელეფონის ერთი შეხებით",
+      "გაუმარტივეთ თქვენს კლიენტებს შეფასების დატოვება ReviewCard-ით. ისინი ტელეფონის ერთი შეხებით გადავლენ თქვენი Google შეფასების გვერდზე",
     primary: "შეუკვეთე",
 
     customersLabel: "ReviewCard-ის მომხმარებლები",
@@ -47,9 +47,16 @@ export const copy = {
     products: "შეარჩიე შენი Google Review ბარათი",
     productsSub:
       "ყველა პროდუქტი ინდივიდუალურად პროგრამირდება შენი ბიზნესისთვის.",
+    productNames: {
+      card: "შეფასების ბარათი (Google Review Card)",
+      stand: "გუგლის შეფასების დასადგამი (Google Review Stand)",
+      sticker: "Google Review სტიკერი",
+      instagram: "Instagram მიმდევრების ბარათი",
+      facebook: "Facebook მიმდევრების ბარათი",
+    },
     productDescriptions: {
-      card: "NFC ბარათი, რომელიც ხსნის ბიზნესის Google შეფასების გვერდს.",
-      stand: "სტენდი კაფეებისთვის, რესტორნებისთვის, სალონებისა და მაღაზიებისთვის.",
+      card: "NFC შეფასების ბარათი, რომელიც ხსნის ბიზნესის Google შეფასების გვერდს.",
+      stand: "გუგლის შეფასების დასადგამი კაფეებისთვის, რესტორნებისთვის, სალონებისა და მაღაზიებისთვის.",
       sticker: "კომპაქტური NFC სტიკერი დახლზე, მაგიდაზე ან სხვა ზედაპირზე.",
       instagram: "ერთი შეხებით ხსნის ბიზნესის Instagram გვერდს.",
       facebook: "ერთი შეხებით ხსნის ბიზნესის Facebook გვერდს.",
@@ -79,6 +86,14 @@ export const copy = {
     faqTitle: "ხშირად დასმული კითხვები",
     faqPrompt: "ვერ იპოვე პასუხი? მოგვწერე — სიამოვნებით დაგეხმარებით.",
     faqs: [
+      [
+        "რა არის შეფასების ბარათი?",
+        "შეფასების ბარათი არის NFC ბარათი, რომელსაც კლიენტი ტელეფონით ეხება და ავტომატურად ეხსნება ბიზნესის Google შეფასების გვერდი, რათა მარტივად დატოვოს შეფასება.",
+      ],
+      [
+        "რა არის გუგლის შეფასების დასადგამი?",
+        "გუგლის შეფასების დასადგამი არის დახლზე ან მაგიდაზე დასადგმელი NFC დასადგამი კაფეებისა და მაღაზიებისთვის, რომელიც ერთი შეხებით ხსნის ბიზნესის Google შეფასების გვერდს.",
+      ],
       [
         "როგორ მუშაობს ReviewCard?",
         "ტელეფონის შეხებით იხსნება მითითებული გვერდი.",
@@ -126,7 +141,7 @@ export const copy = {
   },
 
   en: {
-    documentTitle: "ReviewCard | Get more Google reviews",
+    documentTitle: "Review Card & Google Review Stand | ReviewCard",
 
     nav: {
       home: "Home",
@@ -138,9 +153,9 @@ export const copy = {
       faq: "FAQ",
     },
 
-    hero: "Get more Google reviews with an NFC review card",
+    hero: "NFC Google review cards for Businesses",
     intro:
-      "ReviewCard's NFC card helps your customers easily open your Google review page with one tap of the phone",
+      "Make it easy for your customers to leave a review with ReviewCard. They'll be taken to your Google reviews page with a tap of their phone.",
     primary: "Order",
 
     customersLabel: "ReviewCard customers",
@@ -156,6 +171,13 @@ export const copy = {
 
     products: "Choose your Google Review card",
     productsSub: "Every product is individually programmed for your business.",
+    productNames: {
+      card: "Review Card (Google Review Card)",
+      stand: "Google Review Stand",
+      sticker: "Google Review Sticker",
+      instagram: "Instagram Follow Us Card",
+      facebook: "Facebook Follow Us Card",
+    },
     productDescriptions: {
       card: "NFC card that opens the business's Google review page.",
       stand: "A stand for cafés, restaurants, salons and stores.",
@@ -188,6 +210,14 @@ export const copy = {
     faqTitle: "Frequently asked questions",
     faqPrompt: "Couldn't find the answer? Message us — we'll be happy to help.",
     faqs: [
+      [
+        "What is a review card?",
+        "A review card is an NFC card your customer taps with their phone, which automatically opens your business's Google review page so they can leave a review.",
+      ],
+      [
+        "What is a Google review stand?",
+        "A Google review stand is a counter or table NFC stand for cafés and stores that opens your business's Google review page with one tap.",
+      ],
       [
         "How does ReviewCard work?",
         "Tapping the phone opens the configured page.",

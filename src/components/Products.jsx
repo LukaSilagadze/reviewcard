@@ -33,7 +33,7 @@ export function Products({ t }) {
                   <img
                     className="product-image"
                     src={product.image}
-                    alt={product.name}
+                    alt={t.productNames[product.id]}
                     width="750"
                     height="1000"
                     loading="lazy"
@@ -45,7 +45,7 @@ export function Products({ t }) {
               </div>
 
               <div className="p-body">
-                <h3>{product.name}</h3>
+                <h3>{t.productNames[product.id]}</h3>
                 <p>{t.productDescriptions[product.id]}</p>
               </div>
             </article>

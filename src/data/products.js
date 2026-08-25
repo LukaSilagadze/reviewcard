@@ -1,8 +1,8 @@
 /**
  * Product catalogue. Order here is the order on the page.
  *
- * `id`       also selects the `p-<id>` CSS hook and the description in
- *            `copy[lang].productDescriptions`.
+ * `id`       also selects the `p-<id>` CSS hook and the localized name/
+ *            description in `copy[lang].productNames` / `productDescriptions`.
  * `mark`     glyph shown on the fallback mock-up when there is no photo.
  * `caption`  small line under the mark on the fallback mock-up.
  * `pricing`  volume tiers in GEL, cheapest per unit at higher quantity.
@@ -13,7 +13,6 @@
 export const products = [
   {
     id: "card",
-    name: "Google Review Card",
     image: "/assets/gw_card.webp",
     mark: "G",
     caption: "★★★★★",
@@ -25,7 +24,6 @@ export const products = [
   },
   {
     id: "stand",
-    name: "Google Review Stand",
     image: "/assets/gw_stand.webp",
     mark: "G",
     caption: "★★★★★",
@@ -37,7 +35,6 @@ export const products = [
   },
   {
     id: "sticker",
-    name: "Google Review Sticker",
     image: "/assets/sticker.webp",
     mark: "G",
     caption: "★★★★★",
@@ -49,7 +46,6 @@ export const products = [
   },
   {
     id: "instagram",
-    name: "Instagram Follow Us Card",
     image: "/assets/ig_card.webp",
     mark: "◎",
     caption: "Follow us",
@@ -62,7 +58,6 @@ export const products = [
   },
   {
     id: "facebook",
-    name: "Facebook Follow Us Card",
     image: "/assets/fb_card.webp",
     mark: "f",
     caption: "Follow us",
