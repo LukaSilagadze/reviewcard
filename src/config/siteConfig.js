@@ -33,6 +33,7 @@ export const partners = [
   ["logo-png", "Needshop"],
   ["luxink", "Lux Ink Tattoo Lounge"],
   ["astralfitness", "Astral Fitness"],
+  ["atonelze", "Atonelze Bar"],
   ["burgerking", "Burger King"],
   ["meamacollect", "Meama Collect"],
   ["grossmann", "Grossmann"],
