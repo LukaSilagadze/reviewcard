@@ -11,7 +11,7 @@
  * src/components/icons/SocialIcons.jsx — add a network in both places.
  */
 export const socials = [
-  { id: "instagram", label: "Instagram", url: "https://www.instagram.com/reviewcard_georgia?utm_source=ig_web_button_share_sheet&igsi=ZDNlZDc0MzIxNw==", inOrderModal: true },
+  { id: "instagram", label: "Instagram", url: "https://www.instagram.com/reviewcard.ge/", inOrderModal: true },
   { id: "facebook", label: "Facebook", url: "https://www.facebook.com/profile.php?id=61590586266489", inOrderModal: true },
   { id: "tiktok", label: "TikTok", url: "https://www.tiktok.com/@review.card0?_r=1&_t=ZS-995nA69NEa0", inOrderModal: false },
   { id: "whatsapp", label: "WhatsApp", url: "https://wa.me/995596160003", inOrderModal: true },
