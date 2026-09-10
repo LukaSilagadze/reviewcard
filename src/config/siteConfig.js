@@ -14,7 +14,7 @@ export const socials = [
   { id: "instagram", label: "Instagram", url: "https://www.instagram.com/reviewcard.ge/", inOrderModal: true },
   { id: "facebook", label: "Facebook", url: "https://www.facebook.com/profile.php?id=61590586266489", inOrderModal: true },
   { id: "tiktok", label: "TikTok", url: "https://www.tiktok.com/@review.card0?_r=1&_t=ZS-995nA69NEa0", inOrderModal: false },
-  { id: "whatsapp", label: "WhatsApp", url: "https://wa.me/995596160003", inOrderModal: true },
+  { id: "whatsapp", label: "WhatsApp", url: "https://wa.me/995571811699", inOrderModal: true },
 ];
 
 /** Networks offered as ordering channels inside the modal. */
@@ -22,7 +22,7 @@ export const orderChannels = socials.filter((s) => s.inOrderModal);
 
 // TODO: placeholder contact details.
 export const contact = {
-  phone: "596 16 00 03",
+  phone: "571 81 16 99",
   email: "reviewcard0@gmail.com",
 };
 
