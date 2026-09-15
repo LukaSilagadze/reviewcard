@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import { Logo } from "./Logo";
 import { SocialLinks } from "./SocialLinks";
-import { PhoneIcon, EnvelopeIcon } from "./icons/SocialIcons";
-import { contact } from "../config/siteConfig";
+import { PhoneIcon, EnvelopeIcon, WhatsAppIcon } from "./icons/SocialIcons";
+import { contact, socials } from "../config/siteConfig";
 import { navSections } from "../data/navigation";
 import { languages, languageNames } from "../i18n/translations";
+
+const whatsapp = socials.find((social) => social.id === "whatsapp");
 
 function LanguageMenu({ lang, setLang, t }) {
   const [open, setOpen] = useState(false);
@@ -150,6 +152,20 @@ export function SiteHeader({ lang, setLang, t, activeNav, setActiveNav, onOrder 
                 {t.nav[id]}
               </a>
             ))}
+            {whatsapp && (
+              <div className="mobile-nav-whatsapp">
+                <a
+                  className="btn btn-whatsapp"
+                  href={whatsapp.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  <WhatsAppIcon aria-hidden="true" />
+                  WhatsApp
+                </a>
+              </div>
+            )}
           </nav>
 
           <div className="header-actions">
