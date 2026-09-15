@@ -48,16 +48,16 @@ export const copy = {
     productsSub:
       "ყველა პროდუქტი ინდივიდუალურად პროგრამირდება შენი ბიზნესისთვის.",
     productNames: {
-      card: "შეფასების ბარათი (Google Review Card)",
-      stand: "გუგლის შეფასების დასადგამი (Google Review Stand)",
-      sticker: "Google Review სტიკერი",
-      instagram: "Instagram მიმდევრების ბარათი",
-      facebook: "Facebook მიმდევრების ბარათი",
+      card: "Google-ის ოთხკუთხა მისაკრობი რევიუქარდი",
+      stand: "Google-ის დასადგამი რევიუქარდი",
+      sticker: "Google-ის მრგვალი მისაკრობი რევიუქარდი",
+      instagram: "Instagram მისაკრობი რევიუქარდი",
+      facebook: "Facebook მისაკრობი რევიუქარდი",
     },
     productDescriptions: {
       card: "NFC შეფასების ბარათი, რომელიც ხსნის ბიზნესის Google შეფასების გვერდს.",
       stand: "გუგლის შეფასების დასადგამი კაფეებისთვის, რესტორნებისთვის, სალონებისა და მაღაზიებისთვის.",
-      sticker: "კომპაქტური NFC სტიკერი დახლზე, მაგიდაზე ან სხვა ზედაპირზე.",
+      sticker: "კომპაქტური NFC სტიკერი დახლზე, მაგიდაზე ან სხვა ზედაპირზე დასაკრობად.",
       instagram: "ერთი შეხებით ხსნის ბიზნესის Instagram გვერდს.",
       facebook: "ერთი შეხებით ხსნის ბიზნესის Facebook გვერდს.",
     },
@@ -133,7 +133,7 @@ export const copy = {
     copyright: "შექმნილია მზარდი ბიზნესებისთვის საქართველოში.",
 
     a11y: {
-      home: "ReviewCard — მთავარი",
+      home: "ReviewCard - მთავარი",
       toggleMenu: "მენიუს გახსნა",
       chooseLanguage: "აირჩიე ენა",
       close: "დახურვა",
@@ -172,11 +172,11 @@ export const copy = {
     products: "Choose your Google Review card",
     productsSub: "Every product is individually programmed for your business.",
     productNames: {
-      card: "Review Card (Google Review Card)",
+      card: "Google review card (adhesive)",
       stand: "Google Review Stand",
-      sticker: "Google Review Sticker",
-      instagram: "Instagram Follow Us Card",
-      facebook: "Facebook Follow Us Card",
+      sticker: "Google Review Sticker (adhesive)",
+      instagram: "Instagram Follow Us Card (adhesive)",
+      facebook: "Facebook Follow Us Card (adhesive)",
     },
     productDescriptions: {
       card: "NFC card that opens the business's Google review page.",

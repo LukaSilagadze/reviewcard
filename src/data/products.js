@@ -12,17 +12,6 @@
  */
 export const products = [
   {
-    id: "card",
-    image: "/assets/gw_card.webp",
-    mark: "G",
-    caption: "★★★★★",
-    pricing: [
-      { qty: "1", price: 40 },
-      { qty: "2–9", price: 36 },
-      { qty: "10+", price: 32 },
-    ],
-  },
-  {
     id: "stand",
     image: "/assets/gw_stand.webp",
     mark: "G",
@@ -34,14 +23,25 @@ export const products = [
     ],
   },
   {
+    id: "card",
+    image: "/assets/gw_card.webp",
+    mark: "G",
+    caption: "★★★★★",
+    pricing: [
+      { qty: "1", price: 32 },
+      { qty: "2–9", price: 28 },
+      { qty: "10+", price: 24 },
+    ],
+  },
+  {
     id: "sticker",
     image: "/assets/sticker.webp",
     mark: "G",
     caption: "★★★★★",
     pricing: [
-      { qty: "1", price: 36 },
-      { qty: "2–9", price: 32 },
-      { qty: "10+", price: 28 },
+      { qty: "1", price: 28 },
+      { qty: "2–9", price: 24 },
+      { qty: "10+", price: 22 },
     ],
   },
   {
@@ -51,9 +51,9 @@ export const products = [
     caption: "Follow us",
     // Same physical product as `card`, just programmed for a different link.
     pricing: [
-      { qty: "1", price: 40 },
-      { qty: "2–9", price: 36 },
-      { qty: "10+", price: 32 },
+      { qty: "1", price: 32 },
+      { qty: "2–9", price: 28 },
+      { qty: "10+", price: 24 },
     ],
   },
   {
@@ -62,9 +62,9 @@ export const products = [
     mark: "f",
     caption: "Follow us",
     pricing: [
-      { qty: "1", price: 40 },
-      { qty: "2–9", price: 36 },
-      { qty: "10+", price: 32 },
+      { qty: "1", price: 32 },
+      { qty: "2–9", price: 28 },
+      { qty: "10+", price: 24 },
     ],
   },
 ];

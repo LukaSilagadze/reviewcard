@@ -29,7 +29,7 @@ export const contact = {
 export const partners = [
   ["carpology-logo", "Carpology Shop"],
   ["f1shopgeorgia", "F1 Shop Georgia"],
-  ["pizzamedici", "Pizza Medici"],
+  ["pizzamedici", "Pizza Medici"],  
   ["logo-png", "Needshop"],
   ["luxink", "Lux Ink Tattoo Lounge"],
   ["astralfitness", "Astral Fitness"],
