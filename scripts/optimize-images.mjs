@@ -72,6 +72,7 @@ const jobs = [
   // content-aware auto-cropping did (which kept favoring bright signage
   // over the actual product).
   ...[
+    "astralfitness",
     "burgerking",
     "dekaroom",
     "dekaroomdesk",

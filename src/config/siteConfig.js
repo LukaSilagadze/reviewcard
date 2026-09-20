@@ -49,6 +49,7 @@ export const customerGallery = [
   "dekaroom.webp",
   "dekaroomdesk.webp",
   "grossmann.webp",
+  "astralfitness.webp",
   "grossmannbg.webp",
   "gtline.webp",
   "macncheese.webp",
