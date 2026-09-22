@@ -19,6 +19,21 @@ export function Prices({ t }) {
           <p>{t.pricesSub}</p>
         </div>
 
+        <div className="destination-comparison">
+          <h3>{t.customPage.comparisonTitle}</h3>
+          <table aria-label={t.customPage.comparisonLabel}>
+            <thead>
+              <tr><td /><th scope="col">{t.customPage.direct}</th><th scope="col">{t.customPage.branded}</th></tr>
+            </thead>
+            <tbody>
+              {t.customPage.comparisonRows.map(([label, direct, branded]) => (
+                <tr key={label}><th scope="row">{label}</th><td>{direct}</td><td>{branded}</td></tr>
+              ))}
+            </tbody>
+          </table>
+          <p>{t.customPage.priceDetail} <a href="#custom">{t.customPage.tryDemo} <span aria-hidden="true">↗</span></a></p>
+        </div>
+
         <div className="price-table-wrap">
           <table className="price-table">
             <thead>

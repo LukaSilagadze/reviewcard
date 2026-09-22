@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { useLanguage } from "./hooks/useLanguage";
-
 import { SiteHeader } from "./components/SiteHeader";
 import { Hero } from "./components/Hero";
 import { CustomerCarousel } from "./components/CustomerCarousel";
 import { HowItWorks } from "./components/HowItWorks";
+import { CustomPage } from "./components/CustomPage";
 import { Products } from "./components/Products";
 import { Prices } from "./components/Prices";
 import { Delivery } from "./components/Delivery";
@@ -18,8 +18,16 @@ export default function App() {
   const { lang, setLang, t } = useLanguage();
   const [activeNav, setActiveNav] = useState("top");
   const [orderOpen, setOrderOpen] = useState(false);
+  const [orderIntent, setOrderIntent] = useState(null);
 
-  const openOrder = () => setOrderOpen(true);
+  const openOrder = () => {
+    setOrderIntent(null);
+    setOrderOpen(true);
+  };
+  const openCustomOrder = () => {
+    setOrderIntent("custom");
+    setOrderOpen(true);
+  };
 
   return (
     <>
@@ -37,6 +45,7 @@ export default function App() {
         <Partners t={t} />
         <CustomerCarousel t={t} />
         <HowItWorks t={t} />
+        <CustomPage t={t} lang={lang} onOrder={openCustomOrder} />
         <Products t={t} />
         <Prices t={t} />
         <Delivery t={t} />
@@ -46,7 +55,7 @@ export default function App() {
 
       <SiteFooter t={t} />
 
-      {orderOpen && <OrderModal t={t} onClose={() => setOrderOpen(false)} />}
+      {orderOpen && <OrderModal t={t} intent={orderIntent} onClose={() => setOrderOpen(false)} />}
     </>
   );
 }

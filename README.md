@@ -23,6 +23,13 @@ npm run dev
 Adding a language means adding a key to `copy` and to `languageNames` in
 `translations.js`; every component reads from there.
 
+The branded customer page section uses `src/i18n/customPage.js` for its copy,
+imported into the main translation object. The local demo supports Georgian,
+English, and Russian independently of the website language. See
+[the custom-page launch dependency](docs/custom-page-launch.md) before publishing:
+the live destination application is maintained outside this repository and must
+be updated to match the demo's equal Google/private-feedback choices.
+
 ## Images
 
 `public/assets` holds only web-ready renditions. The full-resolution masters

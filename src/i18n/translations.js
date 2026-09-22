@@ -7,6 +7,8 @@
  * `nav` is keyed by the section ids in `src/data/navigation.js`, and
  * `productDescriptions` by the product ids in `src/data/products.js`.
  */
+import { customPageCopy } from "./customPage";
+
 export const languages = ["ka", "en"];
 
 export const languageNames = {
@@ -16,6 +18,7 @@ export const languageNames = {
 
 export const copy = {
   ka: {
+    customPage: customPageCopy.ka,
     documentTitle: "შეფასების ბარათი და გუგლის შეფასების დასადგამი | ReviewCard",
 
     nav: {
@@ -23,6 +26,7 @@ export const copy = {
       products: "ბარათები",
       prices: "ფასები",
       how: "როგორ მუშაობს",
+      custom: customPageCopy.ka.nav,
       delivery: "მიწოდება",
       partners: "პარტნიორები",
       faq: "ხშირი კითხვები",
@@ -30,7 +34,7 @@ export const copy = {
 
     hero: "NFC გუგლის შეფასების ბარათები ბიზნესებისთვის",
     intro:
-      "გაუმარტივეთ თქვენს კლიენტებს შეფასების დატოვება ReviewCard-ით. ისინი ტელეფონის ერთი შეხებით გადავლენ თქვენი Google შეფასების გვერდზე",
+      "ერთი შეხებით გახსენით თქვენი Google შეფასების გვერდი ან აირჩიეთ დამატებითი პერსონალური გვერდი — შეფასებებით, პირადი უკუკავშირით და სხვა შესაძლებლობებით.",
     primary: "შეუკვეთე",
 
     customersLabel: "ReviewCard-ის მომხმარებლები",
@@ -40,13 +44,13 @@ export const copy = {
     stepLabel: "ნაბიჯი",
     steps: [
       ["მომხმარებელი ტელეფონით ეხება ReviewCard-ს"],
-      ["ავტომატურად იხსნება თქვენი ბიზნესის შეფასების გვერდი"],
-      ["კლიენტი მარტივად ტოვებს შეფასებას"],
+      ["იხსნება Google ან თქვენი პერსონალური გვერდი"],
+      ["კლიენტი ტოვებს შეფასებას ან ირჩევს სასურველ მოქმედებას"],
     ],
 
     products: "შეარჩიე შენი Google Review ბარათი",
     productsSub:
-      "ყველა პროდუქტი ინდივიდუალურად პროგრამირდება შენი ბიზნესისთვის.",
+      "ყველა პროდუქტი ინდივიდუალურად პროგრამირდება შენი ბიზნესისთვის. Google ბარათებისთვის აირჩიე პირდაპირი ბმული ან დამატებითი პერსონალური გვერდი.",
     productNames: {
       card: "Google-ის ოთხკუთხა მისაკრობი რევიუქარდი",
       stand: "Google-ის დასადგამი რევიუქარდი",
@@ -55,7 +59,7 @@ export const copy = {
       facebook: "Facebook მისაკრობი რევიუქარდი",
     },
     productDescriptions: {
-      card: "NFC შეფასების ბარათი, რომელიც ხსნის ბიზნესის Google შეფასების გვერდს.",
+      card: "NFC ბარათი, რომელიც ხსნის Google შეფასებას ან დამატებით პერსონალურ გვერდს.",
       stand: "გუგლის შეფასების დასადგამი კაფეებისთვის, რესტორნებისთვის, სალონებისა და მაღაზიებისთვის.",
       sticker: "კომპაქტური NFC სტიკერი დახლზე, მაგიდაზე ან სხვა ზედაპირზე დასაკრობად.",
       instagram: "ერთი შეხებით ხსნის ბიზნესის Instagram გვერდს.",
@@ -86,13 +90,14 @@ export const copy = {
     faqTitle: "ხშირად დასმული კითხვები",
     faqPrompt: "ვერ იპოვე პასუხი? მოგვწერე — სიამოვნებით დაგეხმარებით.",
     faqs: [
+      ...customPageCopy.ka.faqs,
       [
         "რა არის შეფასების ბარათი?",
-        "შეფასების ბარათი არის NFC ბარათი, რომელსაც კლიენტი ტელეფონით ეხება და ავტომატურად ეხსნება ბიზნესის Google შეფასების გვერდი, რათა მარტივად დატოვოს შეფასება.",
+        "NFC ბარათზე ტელეფონის შეხებით იხსნება თქვენი Google შეფასების გვერდი ან დამატებითი პერსონალური გვერდი, თქვენი არჩევანის მიხედვით.",
       ],
       [
         "რა არის გუგლის შეფასების დასადგამი?",
-        "გუგლის შეფასების დასადგამი არის დახლზე ან მაგიდაზე დასადგმელი NFC დასადგამი კაფეებისა და მაღაზიებისთვის, რომელიც ერთი შეხებით ხსნის ბიზნესის Google შეფასების გვერდს.",
+        "დახლზე ან მაგიდაზე დასადგმელი NFC დასადგამი ერთი შეხებით ხსნის Google შეფასებას ან დამატებით პერსონალურ გვერდს, თქვენი არჩევანის მიხედვით.",
       ],
       [
         "როგორ მუშაობს ReviewCard?",
@@ -141,6 +146,7 @@ export const copy = {
   },
 
   en: {
+    customPage: customPageCopy.en,
     documentTitle: "Review Card & Google Review Stand | ReviewCard",
 
     nav: {
@@ -148,6 +154,7 @@ export const copy = {
       products: "Cards",
       prices: "Prices",
       how: "How it works",
+      custom: customPageCopy.en.nav,
       delivery: "Delivery",
       partners: "Partners",
       faq: "FAQ",
@@ -155,7 +162,7 @@ export const copy = {
 
     hero: "NFC Google review cards for Businesses",
     intro:
-      "Make it easy for your customers to leave a review with ReviewCard. They'll be taken to your Google reviews page with a tap of their phone.",
+      "One tap opens your Google review page—or choose an optional branded page for reviews, private feedback, and more.",
     primary: "Order",
 
     customersLabel: "ReviewCard customers",
@@ -165,12 +172,12 @@ export const copy = {
     stepLabel: "Step",
     steps: [
       ["Tap your phone on ReviewCard"],
-      ["The right page opens"],
-      ["The customer leaves a review"],
+      ["Google or your branded page opens"],
+      ["Customers leave a review or choose their next action"],
     ],
 
     products: "Choose your Google Review card",
-    productsSub: "Every product is individually programmed for your business.",
+    productsSub: "Every product is individually programmed for your business. For Google review cards, choose a direct link or the optional branded page.",
     productNames: {
       card: "Google review card (adhesive)",
       stand: "Google Review Stand",
@@ -179,7 +186,7 @@ export const copy = {
       facebook: "Facebook Follow Us Card (adhesive)",
     },
     productDescriptions: {
-      card: "NFC card that opens the business's Google review page.",
+      card: "NFC card that opens Google reviews or your optional branded page.",
       stand: "A stand for cafés, restaurants, salons and stores.",
       sticker: "A compact NFC sticker for counters, tables or other surfaces.",
       instagram: "Opens the business's Instagram page with one tap.",
@@ -210,13 +217,14 @@ export const copy = {
     faqTitle: "Frequently asked questions",
     faqPrompt: "Couldn't find the answer? Message us — we'll be happy to help.",
     faqs: [
+      ...customPageCopy.en.faqs,
       [
         "What is a review card?",
-        "A review card is an NFC card your customer taps with their phone, which automatically opens your business's Google review page so they can leave a review.",
+        "An NFC card your customer taps with their phone to open your Google review destination or your optional branded customer page, depending on your choice.",
       ],
       [
         "What is a Google review stand?",
-        "A Google review stand is a counter or table NFC stand for cafés and stores that opens your business's Google review page with one tap.",
+        "A counter or table NFC stand that opens your Google review destination or your optional branded customer page with one tap, depending on your choice.",
       ],
       [
         "How does ReviewCard work?",
