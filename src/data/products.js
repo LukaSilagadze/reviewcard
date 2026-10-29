@@ -28,9 +28,9 @@ export const products = [
     mark: "G",
     caption: "★★★★★",
     pricing: [
-      { qty: "1", price: 32 },
-      { qty: "2–9", price: 28 },
-      { qty: "10+", price: 24 },
+      { qty: "1", price: 36 },
+      { qty: "2–9", price: 30 },
+      { qty: "10+", price: 28 },
     ],
   },
   {
@@ -39,9 +39,9 @@ export const products = [
     mark: "G",
     caption: "★★★★★",
     pricing: [
-      { qty: "1", price: 28 },
-      { qty: "2–9", price: 24 },
-      { qty: "10+", price: 22 },
+      { qty: "1", price: 32 },
+      { qty: "2–9", price: 28 },
+      { qty: "10+", price: 24 },
     ],
   },
   {
@@ -51,9 +51,9 @@ export const products = [
     caption: "Follow us",
     // Same physical product as `card`, just programmed for a different link.
     pricing: [
-      { qty: "1", price: 32 },
-      { qty: "2–9", price: 28 },
-      { qty: "10+", price: 24 },
+      { qty: "1", price: 36 },
+      { qty: "2–9", price: 30 },
+      { qty: "10+", price: 28 },
     ],
   },
   {
@@ -62,9 +62,9 @@ export const products = [
     mark: "f",
     caption: "Follow us",
     pricing: [
-      { qty: "1", price: 32 },
-      { qty: "2–9", price: 28 },
-      { qty: "10+", price: 24 },
+      { qty: "1", price: 36 },
+      { qty: "2–9", price: 30 },
+      { qty: "10+", price: 28 },
     ],
   },
 ];
