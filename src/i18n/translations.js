@@ -72,9 +72,9 @@ export const copy = {
     delivery: "მიწოდება მთელ საქართველოში",
     deliveryText:
       "არ აქვს მნიშვნელობა სად მდებარეობს შენი ბიზნესი — ReviewCard-ს საქართველოს ნებისმიერ რეგიონში მოგაწვდით.",
-    city: "დიდ ქალაქებში",
-    cityTime: "დაახლოებით 2 სამუშაო დღე",
-    other: "სხვა ლოკაციებში",
+    city: "ქალაქებში",
+    cityTime: "1-2 სამუშაო დღე",
+    other: "რეგიონებში",
     otherTime: "2–4 სამუშაო დღე",
 
     deliveryMapTitle: "რუკა - ბიზნესები, რომლებსაც აქვთ ReviewCard საქართველოში",
@@ -84,7 +84,6 @@ export const copy = {
     partnerLogoPlaceholder: "ლოგო",
 
     faqTitle: "ხშირად დასმული კითხვები",
-    faqPrompt: "ვერ იპოვე პასუხი? მოგვწერე — სიამოვნებით დაგეხმარებით.",
     faqs: [
       [
         "რა არის შეფასების ბარათი?",
@@ -197,7 +196,7 @@ export const copy = {
     deliveryText:
       "Wherever your business is located, we deliver ReviewCard to every region of Georgia.",
     city: "Major cities",
-    cityTime: "Around 2 working days",
+    cityTime: "1-2 working days",
     other: "Other locations",
     otherTime: "2–4 working days",
 
@@ -208,7 +207,6 @@ export const copy = {
     partnerLogoPlaceholder: "LOGO",
 
     faqTitle: "Frequently asked questions",
-    faqPrompt: "Couldn't find the answer? Message us — we'll be happy to help.",
     faqs: [
       [
         "What is a review card?",
